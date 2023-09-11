@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="descriptions" content="mass meal-list">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="stylesheet/main.css">
+    <title>mess list</title>
+</head>
+<body>
+    <div class="container" id="myHeight">
+        <div class="pay-list" id="noteMe">
+            <div class="notice-container">
+                <div class="payable-notice">
+                    <div class="item-pay-notice"><h6>Payable:</h6></div>
+                    <div class="item-pay-notice" id="notice-total-amount"><h5>&nbsp;00 <span>TK</span></h5></div>
+                </div>
+                <table class="payment-list">
+                    <caption class="payment-list-heading" id="notice-month-name"><h5>Month</h5></caption>
+                    <thead>
+                        <tr class="data-center">
+                            <th>date</th><th>method</th><th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="paymentListShowMe">
+                        <!-- data come from backend -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="data-center" id="payTotalSum">
+                            <!-- data come from backend -->
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="exit-container"><button class="exit-btn" id="exitButton">Exit</button></div>
+            </div>
+        </div>
+        <section class="wrapper" id="registrar-page">
+            <div class="wrapper-log-page" id="log-page">
+                <div class="btn-item">
+                    <div class="user-input">
+                        <input type="text" class="user-input-btn" maxlength="11" placeholder="Your Phone Number" id="user-number">
+                    </div>
+                </div>
+                <div class="btn-item">
+                    <div class="user-entry" id="user-btn">
+                        <button class="user-entry-btn" id="user-btn-enter">Enter</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mess-page" id="mess-front">
+            <div class="mess-wrapper">
+                <header class="list-header">
+                    <h1 class="person-name show-me" id="personName"></h1>
+                    <h2 class="person-cost" id="personCost"><span class="center-fix" id="person-details-month">Running Month</span></h2>
+                    <h2 class="person-pre-cost" id="personPreCost"><span class="center-fix" id="person-pre-month">Previous Month</span></h2>
+                    <h2 class="person-meal-cost" id="personMealCost"><span class="center-fix" id="meal-month">Month</span></h2>
+                    <h2 class="member-meal-list" id="memberMealList"><span class="center-fix">All Member Dining</span></h2>
+                </header>
+                <main class="list-container">
+                    <div class="person-payable show-me" id="personPayable">
+                        <table>
+                            <thead class="total-head">
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Payable</th>
+                                </tr>
+                            </thead>
+                            <tbody class="total-body">
+                                <tr>
+                                    <td id="current-month">17th jan 2020</td>
+                                    <td id="total-cost"></td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="total-footer">
+                                <tr>
+                                    <td><h3>your Paid list</h3></td>
+                                    <td><button id="payList">view</button></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="person-details" id="personDetails">
+                        <table>
+                            <thead class="person-details-header">
+                                <tr class="row-height-spacing">
+                                    <th colspan="2">List of costing</th><th>Payable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row-height-spacing">
+                                    <td>Stay Cost</td>
+                                    <td>=</td>
+                                    <td id="memberStayCost">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Khala's bill</td>
+                                    <td>=</td>
+                                    <td id="runningKhalaCost">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Net's Bill</td>
+                                    <td>=</td>
+                                    <td id="running-net-cost">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Service Cost</td>
+                                    <td>=</td>
+                                    <td id="running-service-cost">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Other Cost</td>
+                                    <td>=</td>
+                                    <td id="running-other-cost">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Previous Dining Get</td>
+                                    <td>=</td>
+                                    <td id="previous-get-in-dining">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Previous Dining Due</td>
+                                    <td>=</td>
+                                    <td id="previous-due-in-dining">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Garage Bill</td>
+                                    <td>=</td>
+                                    <td id="garage-bill">00</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr class="row-height-spacing">
+                                    <th colspan="2">Total</th>
+                                    <th><h3><strong id="total-stay-amount"></strong> <span>TK</span></h3></th>
+                                </tr>
+                                </tfoot>
+                        </table>
+                    </div>
+                    <div class="person-pre-details" id="personPreDetails">
+                        <table>
+                            <thead class="person-pre-month-details">
+                                <tr class="row-height-spacing">
+                                    <th colspan="2">Categories</th>
+                                    <th>Amount</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="row-height-spacing">
+                                    <td>Payable</td>
+                                    <td>=</td>
+                                    <td id="pre-payable">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Paid</td>
+                                    <td>=</td>
+                                    <td id="pre-paid">00</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Add Dining</td>
+                                    <td>=</td>
+                                    <td id="remaining-dining">100</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>Dining Cost</td>
+                                    <td>=</td>
+                                    <td id="remaining-due">100</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>GET</td>
+                                    <td>=</td>
+                                    <td id="getBack">100</td>
+                                </tr>
+                                <tr class="row-height-spacing">
+                                    <td>DUE</td>
+                                    <td>=</td>
+                                    <td id="dueBack">00</td>
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <th colspan="3">
+                                        <h4>If any remaining money, that is calculated in your current month.</h4>
+                                    </th>
+                                </tr>
+                                </tfoot>
+                        </table>
+                    </div>
+                    <div class="person-meal-details" id="personMealDetails">
+                        <table>
+                            <caption><h1>Running cost of Dining</h1></caption>
+                            <thead class="running-meal-details-heading">
+                            <tr class="row-height-spacing">
+                                <th colspan="4">Categories</th>
+                                
+                                <th>Amount</th>
+                            </tr>
+                            <tr class="row-height-spacing">
+                                <th></th>
+                                <th>Meal</th>
+                                <th>Rate</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="row-height-spacing">
+                                <td>Dining Cost</td>
+                                <td id="totalMeal"></td>
+                                <td id="meal-rate"></td>
+                                <td>=</td>
+                                <td id="meal-total"></td>
+                            </tr>
+                            <tr class="row-height-spacing">
+                                <td colspan="3">Paid for Dining</td>
+                                <td>=</td>
+                                <td id="paidForDining">00</td>
+                            </tr>
+                            <tr class="row-height-spacing">
+                                <td colspan="3">Get in Dining</td>
+                                <td>=</td>
+                                <td id="reFoundDining">00</td>
+                            </tr>
+                            <tr class="row-height-spacing">
+                                <td colspan="3">Due In Dining</td>
+                                <td>=</td>
+                                <td id="dueIndining">00</td>
+                            </tr>
+                            <tr class="row-height-spacing">
+                                <td colspan="3">Status</td>
+                                <td>=</td>
+                                <td id="mealStatus">Get</td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            <tr class="row-height-spacing">
+                                <th>Total</th>
+                                <th colspan="3"><strong id="status-dining">Remaining</strong></th>
+                                <th><strong id="comment-status"></strong><span> TK</span></th>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="member-meal-details" id="memberMealDetails">
+                        <table>
+                            <thead class="daily-dining-list">
+                                <tr class="row-height-spacing">
+                                    <th>Name</th>
+                                    <th><p>Meal</p><p>Cost</p></th>
+                                    <th><p>Deposit</p><p>Bazar</p></th>
+                                    <th>Get</th>
+                                    <th>Due</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row-height-spacing" id="udoy">
+                                    <!-- data come from backend -->
+                                </tr>
+                                <tr class="row-height-spacing" id="razu">
+                                    <!-- data come from backend -->
+                                </tr>
+                                <tr class="row-height-spacing" id="sony">
+                                    <!-- data come from backend -->
+                                </tr>
+                                <tr class="row-height-spacing" id="amrul">
+                                    <!-- data come from backend -->
+                                </tr>
+                                <tr class="row-height-spacing" id="masum">
+                                    <!-- data come from backend -->
+                                </tr>
+                                <tr class="row-height-spacing" id="imran">
+                                    <!-- data come from backend -->
+                                </tr>
+                                <tr class="row-height-spacing" id="linja">
+                                    <!-- data come from backend -->
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="row-height-spacing">
+                                    <th colspan="5"><h3>Everyday check your Dining.</h3></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        <div class="date-time" id="timeMe"></div>
+                    </div>
+                </main>
+                <footer class="list-footer">
+                    <div class="first-page show-me" id="f1">
+                        <div class="next"><button id="firstNext">next</button></div>
+                    </div>
+                    <div class="second-page" id="f2">
+                        <div class="back"><button id="secondBack">back</button></div>
+                        <div class="next"><button id="secondNext">next</button></div>
+                    </div>
+                    <div class="third-page" id="f3">
+                        <div class="back"><button id="thirdBack">back</button></div>
+                        <div class="next"><button id="thirdNext">next</button></div>
+                    </div>
+                    <div class="fourth-page" id="f4">
+                        <div class="back"><button id="fourthBack">back</button></div>
+                        <div class="next"><button id="fourthNext">next</button></div>
+                    </div>
+                    <div class="fifth-page" id="f5">
+                        <div class="back"><button id="fifthBack">back</button></div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+    </div>
+<script src="js/script.js" type="text/javascript"></script>
+</body>
+</html>

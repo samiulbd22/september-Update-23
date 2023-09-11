@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:wght@400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+:root{
+    --font-small:1.6rem;
+    --font-big:2rem;
+    --font-bigger:2.4rem;
+    --font-biggest:3rem;
+    --color-primary:#440A67;
+    --color-ternary:#B4AEE8;
+    --color-root:#cdcbe6;
+    --color-bg:#aecbca;
+    --color-grey:#424242;
+    --color-heading:#0d040f;
+    --color-submit:#042604;
+    --color-specify:#B3005E;
+    --color-warning:#FF8D29;
+    --color-bg-front:#28DF99;
+    --color-secondary:#93329E;
+    --font-weight__regular:400;
+    --font-weight__medium:500;
+    --font-weight__Semi-bold:600;
+    --radius-small:.3rem;
+    --radius-big:.5rem;
+    --radius-bigger:1rem;
+    --shadow:.2rem .2rem .3rem .2rem rgba(0,0,0,0.5);
+}
+html{
+    width: 100%;
+    min-height: 100%;
+    font-size: 62.5%;
+    font-family: 'Noto Sans Display', sans-serif;
+}
+body{
+    font-size: var(--font-small);
+    font-weight: var(--font-weight__regular);
+    min-height: 764px;
+    font-size: inherit;
+    font-family: 'Noto Sans Display';
+}
+.container{
+    width: 100%;
+    min-height: 764px;
+    position: relative;
+    background-color: var(--color-root);
+    
+}
+.pay-list{
+    width: 90%;
+    height: 90%;
+    background-color: #cacaca;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display: none;
+    z-index: 999;
+}
+.notice-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-big);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+.payable-notice{
+    width: 90%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: end;
+    margin-bottom: 1.5rem;
+    border-bottom: .1rem dotted #000;
+}
+.item-pay-notice{
+    width: 8rem;
+    height: 4rem;
+    text-align: center;
+    padding: .2rem;
+    font-size: var(--font-big);
+    font-weight: var(--font-weight__regular);
+    text-transform: capitalize;
+}
+.payment-list{
+    width: 90%;
+    max-height: 25rem;
+    margin: 1rem 0;
+    border-collapse: collapse;
+}
+.payment-list-heading{
+    width: 100%;
+    height: 2.4rem;
+    background-color: var(--color-heading);
+    font-size: var(--font-small);
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.data-center{
+    text-align: center;
+    text-transform: capitalize;
+}
+.exit-container{
+    width: 90%;
+    height: 3rem;
+    text-align: center;
+}
+.exit-btn{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: .6rem auto;
+    background-color: var(--color-grey);
+    color: #fff;
+    border: none;
+    outline: none;
+}
+.wrapper{
+    width: 98%;
+    height: 98%;
+    background-color: var(--color-ternary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--radius-bigger);
+    overflow: hidden;
+}
+.wrapper-log-page{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.btn-item{
+    width: 30rem;
+    height: 5rem;
+    margin-bottom: 1rem;
+}
+.user-input{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-big);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+.user-input-btn{
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    border: none;
+    font-size: var(--font-big);
+    font-weight: var(--font-weight__Semi-bold); 
+    background-color: var(--color-root);
+}
+.user-entry{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius-big);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: none;
+}
+.user-entry-btn{
+    display: inline-block;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    border: none;
+    font-size: var(--font-big);
+    font-weight: var(--font-weight__Semi-bold); 
+    background-color: var(--color-submit);
+    color: var(--color-root);
+    text-transform: uppercase;
+    pointer-events: painted;
+}
+.user-btn-show{
+    display: inline-block;
+}
+.wrapper-hide{
+    display: none;
+}
+.mess-page{
+    width: 98%;
+    height: 98%;
+    background-color: var(--color-ternary);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--radius-bigger);
+    overflow: hidden;
+    display: none;
+}
+.mess-page-show{
+    display: block;
+}
+.mess-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.list-header,.list-container,.list-footer{
+    width: 90%;
+    height: min-content;
+    margin: 2% auto;
+    display: inline-block;
+}
+.list-container{
+    min-height: 45%;
+}
+/* person name heading start*/
+.person-name,.person-cost,.person-pre-cost,.person-meal-cost,.member-meal-list{
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+    position: relative;
+    background-color: var(--color-primary);
+    color: var(--color-root);
+    border-radius: var(--radius-big);
+    box-shadow: var(--shadow);
+    font-weight: var(--font-weight__Semi-bold);
+    overflow: hidden;
+    display: none;
+}
+table{
+    width: 100%;
+    height: min-content;
+    border-spacing: none;
+}
+.total-head{
+    width: 100%;
+    height: 4rem;
+    border-collapse: collapse;
+    
+}
+.total-head>tr{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-secondary);
+    
+}
+.total-body{
+    width: 100%;
+    height: 8rem; 
+    background-color: var(--color-bg);
+    text-align: center;
+}
+.total-body>tr{
+    width: 100%;
+    height: 100%;
+}
+.total-footer{
+    width: 100%;
+    height: 4rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.total-footer>tr{
+    width: 100%;
+    height: 100%;
+}
+td>button{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    background-color: var(--color-secondary);
+    border-radius: var(--radius-big);
+}
+
+@media screen and (max-width: 400px) {
+    .person-name,.person-cost,.person-pre-cost,.person-meal-cost,.member-meal-list{
+        font-size: 1.5rem;
+    }
+  }
+
+
+.center-fix{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+}
+@media (min-height: 580px) and (max-height: 641px ) {
+    .container{
+        min-height: 640px;
+    }
+}
+
+@media (min-height: 641px) and (max-height: 765px ) {
+    .container{
+        min-height: 764px;
+    }
+}
+@media (min-height: 765px) and (max-height: 860px) {
+    .container{
+        min-height: 851px;
+    }
+}
+@media (min-height: 860px) and (max-height: 901px) {
+    .container{
+        min-height: 900px;
+    }
+}
+
+@media (min-height: 901px) and (max-height: 1000px) {
+    .container{
+        min-height: 960px;
+    }
+}
+@media (min-height: 1001px) and (max-height: 1400px) {
+    .container{
+        min-height: 1334px;
+    }
+}
+@media (min-height: 1400px) and (max-height: 2000px) {
+    .container{
+        min-height: 1920px;
+    }
+}
+/* person name heading end*/
+
+
+/* details content start*/
+.person-payable,.person-details,.person-pre-details,.person-meal-details,.member-meal-details{
+    width: 100%;
+    min-height: min-content;
+    margin: 1% auto;
+    border-radius: var(--radius-big);
+    box-shadow: var(--shadow);
+    display: none;
+}
+.person-details-header,.person-pre-month-details,.running-meal-details-heading,.daily-dining-list{
+    background-color: var(--color-heading);
+    color: #fff;
+}
+.person-details-header .row-height-spacing{
+    height: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+tbody .row-height-spacing{
+    height: 2.2rem;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: .1rem dotted var(--color-grey);
+}
+tbody .row-height-spacing td{
+    border-bottom: .07rem dotted var(--color-grey);
+}
+tfoot .row-height-spacing{
+    height: 2.2rem;
+    text-align: center;
+    background-color: var(--color-grey);
+    color: #fff;
+    text-transform: capitalize;
+}
+.person-pre-month-details .row-height-spacing{
+    height: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.running-meal-details-heading .row-height-spacing{
+    height: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+.daily-dining-list .row-height-spacing{
+    height: 2.5rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+/* details content end*/
+/* footer start */
+.first-page,.second-page,.third-page,.fourth-page,.fifth-page{
+    width: 100%;
+    height: 3.5rem;
+    display: none;
+    position: relative;
+}
+.back,.next{
+    width: 15rem;
+    height: 100%;
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow);
+    font-size: var(--font-big);
+    font-weight: var(--font-weight__Semi-bold); 
+    overflow: hidden;
+}
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.next{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#firstNext,#secondNext,#thirdNext,#fourthNext,#secondBack,#thirdBack,#fourthBack,#fifthBack{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--color-bg-front);
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+}
+#secondBack,#thirdBack,#fourthBack,#fifthBack{
+    background-color: var(--color-specify);
+}
+/* footer end */
+/* show file */
+.show-me{
+    display: block;
+}
+/* show file */
+/* time clock */
+.date-time{
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.clock-data{
+    padding: 1rem;
+    margin: .5rem;
+    text-align: center;
+    color: var(--color-specify);
+    background-color: #b9b1ba;
+    border: 0.1rem solid var(--color-heading);
+    border-radius: var(--radius-small);
+    box-shadow: var(--shadow);
+}
