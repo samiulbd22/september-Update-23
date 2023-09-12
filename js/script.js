@@ -421,7 +421,7 @@ function dateClock(){
     const month         = startDate.getMonth();
     const year          = startDate.getFullYear();
     const myMonth       =["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
-    document.getElementById("timeMe").innerHTML = `<span class="clock-data"><h4>${day}</h4></span><span class="clock-data">${month}</span><span class="clock-data">${year}</span>`;
+    document.getElementById("timeMe").innerHTML = `<span class="clock-data"><h4>${day}</h4></span><span class="clock-data">${myMonth[month]}</span><span class="clock-data">${year}</span>`;
     if (startDate > endDate){
         document.getElementById("timeMe").innerHTML = `<span class="clock-data">00</span><span class="clock-data">00</span><span class="clock-data">00</span>`;
     }
