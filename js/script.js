@@ -457,7 +457,7 @@ function opener(){
             const payment = members[user_number].payment;
             if(payment === undefined){
                 document.getElementById("paymentListShowMe").innerHTML = `<tr class="data-center">
-                <td colspan="3"><h3>your payment not yet</h3></td></tr>`;
+                <td colspan="3"><h3>your payment not yet added</h3></td></tr>`;
                 }else{
                     let paidMe ='';
                     let paidMeSum = 0;
