@@ -43,7 +43,7 @@ const members = {
         previous_dining_cost:1400,
         payment             :{
                                 "10/09/23-Cash":2000,
-                                "14/09/23-Cash":500,
+                                "15/09/23-Cash":500,
                             },
         // running month
         stay_cost       :2000,
