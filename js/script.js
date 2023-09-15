@@ -6,7 +6,7 @@ const members = {
     runningMonth    :"September-23",
     previousMonth   :"August-23", // new add
     upComingMonth   :"October 1,2023",
-    runningMealRate :84,
+    runningMealRate :81,
 
     "01814843266":{
         name:"Istiaq Ahmad Udoy",
@@ -21,7 +21,7 @@ const members = {
         garage_cost     :0,
         running_payable :2959,
         running_paid    :5000,
-        running_meal    :6,
+        running_meal    :8,
         // method calling
         previousAddedDining,
         previousDue,
@@ -42,14 +42,15 @@ const members = {
         previous_paid       :4220,
         previous_dining_cost:1400,
         payment             :{
-                                "10/09/23-Cash":2000
+                                "10/09/23-Cash":2000,
+                                "14/09/23-Cash":500,
                             },
         // running month
         stay_cost       :2000,
         garage_cost     :0,
         running_payable :2497,
         running_paid    :2000,
-        running_meal    :14,
+        running_meal    :15,
         // method calling
         previousAddedDining,
         previousDue,
@@ -105,7 +106,7 @@ const members = {
         garage_cost     :0,
         running_payable :4810,
         running_paid    :0,
-        running_meal    :16,
+        running_meal    :17,
         // method calling
         previousAddedDining,
         previousDue,
@@ -131,7 +132,7 @@ const members = {
         garage_cost     :0,
         running_payable :3870,
         running_paid    :6000,
-        running_meal    :26,
+        running_meal    :28,
         // method calling
         previousAddedDining,
         previousDue,
@@ -160,7 +161,7 @@ const members = {
         garage_cost     :0,
         running_payable :2006,
         running_paid    :5000,
-        running_meal    :11,
+        running_meal    :13,
         // method calling
         previousAddedDining,
         previousDue,
@@ -176,7 +177,7 @@ const members = {
         message:"<h2>আপনাকে গত মাসের মিলের বাজার বাবত দিতে হবে <strong>465</strong> টাকা । </h2>"
     },
     "01714443406":{
-        name:"Khandakar Emon Ahmed",
+        name:"Khondokar Emon Ahmed",
         pre_previous_payable:6000,
         previous_paid       :8000,
         previous_dining_cost:455,
@@ -192,7 +193,7 @@ const members = {
         garage_cost     :0,
         running_payable :2030,
         running_paid    :0,
-        running_meal    :27,
+        running_meal    :30,
         // method calling
         previousAddedDining,
         previousDue,
