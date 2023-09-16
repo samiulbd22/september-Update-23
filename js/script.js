@@ -101,7 +101,7 @@ const members = {
         pre_previous_payable:4775,
         previous_paid       :7000,
         previous_dining_cost:1960,
-        payment             :{"16/09/23-Cash:7000"},
+        payment             :{"16/09/23-Cash":7000},
         // running month
         stay_cost       :4500,
         garage_cost     :0,
