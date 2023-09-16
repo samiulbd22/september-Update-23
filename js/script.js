@@ -72,13 +72,14 @@ const members = {
         previous_paid       :5500,
         previous_dining_cost:1400,
         payment             :{
-            "10/09/23-bkash":3500
+            "10/09/23-bkash":3500,
+            "16/09/23-Cash":1500
         },
         // running month
         stay_cost       :2500,
         garage_cost     :500,
         running_payable :3666,
-        running_paid    :3500,
+        running_paid    :5000,
         running_meal    :2,
         // method calling
         previousAddedDining,
