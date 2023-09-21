@@ -21,7 +21,7 @@ const members = {
         garage_cost     :0,
         running_payable :2959,
         running_paid    :5000,
-        running_meal    :17,
+        running_meal    :18,
         // method calling
         previousAddedDining,
         previousDue,
@@ -44,13 +44,14 @@ const members = {
         payment             :{
                                 "10/09/23-Cash":2000,
                                 "15/09/23-Cash":500,
+                                "21/09/23-Cash":300,
                             },
         // running month
         stay_cost       :2000,
         garage_cost     :0,
         running_payable :2497,
-        running_paid    :2000,
-        running_meal    :20,
+        running_paid    :2800,
+        running_meal    :21,
         // method calling
         previousAddedDining,
         previousDue,
@@ -74,13 +75,14 @@ const members = {
         payment             :{
             "10/09/23-bkash":3500,
             "16/09/23-Cash":1500,
+            "20/09/23-Cash":500,
         },
         // running month
         stay_cost       :2500,
         garage_cost     :500,
         running_payable :3666,
-        running_paid    :5000,
-        running_meal    :11,
+        running_paid    :5500,
+        running_meal    :13,
         // method calling
         previousAddedDining,
         previousDue,
@@ -107,7 +109,7 @@ const members = {
         garage_cost     :0,
         running_payable :4810,
         running_paid    :7000,
-        running_meal    :23,
+        running_meal    :24,
         // method calling
         previousAddedDining,
         previousDue,
@@ -133,7 +135,7 @@ const members = {
         garage_cost     :0,
         running_payable :3870,
         running_paid    :6000,
-        running_meal    :38,
+        running_meal    :40,
         // method calling
         previousAddedDining,
         previousDue,
@@ -162,7 +164,7 @@ const members = {
         garage_cost     :0,
         running_payable :2006,
         running_paid    :5000,
-        running_meal    :19,
+        running_meal    :20,
         // method calling
         previousAddedDining,
         previousDue,
